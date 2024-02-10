@@ -1,3 +1,9 @@
 Se envian los cambios del repositoro local a remoto.Ambos con la misma informacion
 En git bash comando git push origin main - Enviamos a origin del remoto nuestra rama local main
 met
+Si escribimos en gitbash :
+sitorio (main)
+$ git push origin main
+Obtenemos:
+Everything up-to-date  
+Todo esta actualizado
