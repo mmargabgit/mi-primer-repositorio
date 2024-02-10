@@ -1,0 +1,19 @@
+1 Se trata de actualizar el repositorio local 
+    para que tengan la misma informacion
+2 desde git bash escribimos para traerno toda la informacion del remoto
+sitorio (main)
+$ git pull origin main
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 1.90 KiB | 55.00 KiB/s, done.
+From https://github.com/mmargabgit/mi-primer-repositorio
+ * branch            main       -> FETCH_HEAD
+   4540e58..61e4b8a  main       -> origin/main
+error: Your local changes to the following files would be overwritten by merge:
+        clonar-repos-remoto.txt
+Please commit your changes or stash them before you merge.
+Aborting
+Updating 4540e58..61e4b8a
+Se necesita hacer commit en el el archivo clonar-repos-remoto.txt
