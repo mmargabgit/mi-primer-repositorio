@@ -1,0 +1,7 @@
+entramos en github click mi-primer-repositorio
+click en +
+CLCIK upload files
+En la ventana que se abre arrastrar archivos o elige tu archivo
+5 ir abajo y click en commit changes  si estas de acuerdo con la descripcion
+esperar y ver en mi-primer-repositorio que esta cargado el archivo
+ir abajo y click en commit

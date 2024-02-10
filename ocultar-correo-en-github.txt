@@ -1,0 +1,10 @@
+Ir a github Arriba derecha Click perfil personal Foto de perfilClick settings
+Panel izquierdo click en emails
+Primary email address 
+copia el correo *********+mmargabgit@users.noreply.github.com
+tick caja Block command line pushes that expose my email
+Ir a gitbash
+$ git config --global user.email ********+mmargabgit@users.noreply.github.com
+
+
+para hacer push ahora necesitaremos un token

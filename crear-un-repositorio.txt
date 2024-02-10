@@ -1,0 +1,7 @@
+1 en gitbash nos situamos en la carpeta local donde vamo a general el repositorio
+***/Programacion/Github/curso-github/mi-primer-repositorio (main)
+2 git init
+3 se crea una carpeta oculta tal como .git
+4 al final de ~ ...aparece  (main)
+5 si vniera al final (master) se puede cambiar el nombre de la rama
+6   git config --global init.defaultBranch main
