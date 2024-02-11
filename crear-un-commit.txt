@@ -112,4 +112,11 @@ commit 1681ef4efed85a8d534c6e78c50b0d67353adf75
 * Crear commit con el editor de texto vs code
     *En el editor de vs code vemos que no tenemos ninguna letra  a la izauierda si no hay nada que hacer
     *Cuando guardo los cambios aparece la letra M a la izquierda en vs code
-    
+    *** (main)
+     $ git commit
+     
+     Click Enter se abre en la partre izquierda Commit .Click parte derecha y 
+     en el editor Commitin Editmsg escribir el commit
+     guardar y cerrar
+     
+
