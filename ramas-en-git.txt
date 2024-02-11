@@ -90,6 +90,13 @@ git checkout -b <nombre de la rama nueva>
     create mode 100644 comandos-gitbash.txt
     
     SE HA CREADO UN COMMIT EN LA RAMA VERSION-javascript
+     
+     * Creamos el commit
+     ***(main)
+    $ git commit m- "se ha creado un commit en la rama versionjavascript"
+    error: pathspec 'm-' did not match any file(s) known to git
+    error: pathspec 'se ha creado un commit en la rama versionjavascript' did not match any file(s) known to git
+
 
 
 
