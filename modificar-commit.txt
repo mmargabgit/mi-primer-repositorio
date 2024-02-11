@@ -1,0 +1,18 @@
+Para cambiar el ultimo commit escribimos el comando git commit a+--amend
+  ***  (main)
+    $ git commit --amend
+
+    * Se abre el editor vs code COMMIT_EDITMSG
+    * Escribimos el mensaje de commit
+    * Guardamos el archivo y cerramo . Al cerrar en gitbash sale :
+
+    [main 979ce0f] git-status.txt acabado
+    Date: Sun Feb 11 19:45:27 2024 +0100
+    1 file changed, 1 insertion(+), 1 deletion(-)
+
+    Con este commando vemos que hemos cambiado el ultimo commit hehco en el archivo git-status.txt y 
+    lo hemos cambiado añadiendo la palabra acabado
+
+* Revertir el ultimo commit  git reset --soft HEAD~1
+    Con esto quitamos el ultimo commit y no cambiamos el archivo
+    con git log vemos que quitamos el ultimo commit
