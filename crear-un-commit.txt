@@ -1,0 +1,115 @@
+https://youtu.be/mBYSUUnMt9M?t=4606
+1 Un commit es una fotografia del estado del archivo en el momento de hacer el commit
+
+2 Empezamos con status
+
+    sitorio (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        comandos-gitbash.txt
+        crear-un-commit.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+    * tenemos dos archivos para cambiar al estado Stage comandos-gitbash.txt y crear un commit.txt
+    * Actualmente se esta trabajando en sv code en estos archivos y estan untracked
+    * Pasa mos al estado stage el archivo crear-un-commit.txt
+      sitorio (main)
+        $  git add crear-un-commit.txt
+    * Vemos el estado del repositorio
+        er-repositorio (main)
+        $ git status
+        On branch main
+        Your branch is up to date with 'origin/main'.
+
+        Changes to be committed:
+        (use "git restore --staged <file>..." to unstage)
+        new file:   crear-un-commit.txt
+
+        Untracked files:
+        (use "git add <file>..." to include in what will be committed)
+        comandos-gitbash.txt
+
+    * La informacion que revela este estado son los siguientes:
+    1 Tenemos que actualizar repositorio remoto
+    2 Tenemos archivo crear-un-commit.txt cambios para ser commited
+    3 Como no se ha guardado el archivo comando-gitbash.txt en vs code aparece la letra u a la izquierda y ademas no esta añadido al estado stage
+    4 Estamos en la rama main . branch (main) en el repositorio local
+
+    * quitamos el archivo del area de preparacion stage y deshacemos los cambios
+        ***sitorio (main)
+        $ git rm --cached crear-un-commit.txt
+        rm 'crear-un-commit.txt'
+
+        * Volvemos a comprobar que los dos archivos estan en estado untracked
+
+        ***sitorio (main)
+        $ git status
+        On branch main
+        Your branch is up to date with 'origin/main'.
+
+        Untracked files:
+        (use "git add <file>..." to include in what will be committed)
+                comandos-gitbash.txt
+                crear-un-commit.txt
+
+        nothing added to commit but untracked files present (use "git add" to track)
+
+            * Volvemos a tener los dos archivos en untracked
+
+    * Cuando se crea un commit se genera un SHA que es un algoritmo seguro de has
+    1 El has identifica los camnbios realizados
+    2 Donde se tealizaron los camnbios
+    3 Quien realizo los cambios
+
+    * Volvemos a añadir archivo a estado stage
+        ***sitorio (main)
+        $ git add crear-un-commit.txt
+
+    * Creamos un commit de ese archivo
+    ***sitorio (main)
+    $ git commit -m "Crear commit"
+    [main 3d05c3d] Crear commit
+    1 file changed, 0 insertions(+), 0 deletions(-)
+    create mode 100644 crear-un-commit.txt
+
+
+Crear un commit comando : git commit -m "Crear commit"
+
+13 Ver relacion de commits comando : git log
+
+    commit 3d05c3d0a0a15a0f6b8d4b3f8b32c38b031021cc (HEAD -> main)
+Author: ***
+Date:   Sun Feb 11 18:04:21 2024 +0100
+
+    Crear commit
+
+commit 79394294a0af4120a18cc28d3a4aa8b0d301f773 (origin/main, origin/HEAD)
+Author: ***
+Date:   Sat Feb 10 20:12:58 2024 +0100
+
+    "Finalizado enviar cambios a github comando push"
+
+commit c40736ccd4b1f601295f16f254a1028359b0190e
+Author: ***
+Date:   Sat Feb 10 19:45:52 2024 +0100
+
+    "Finalizado"
+
+commit 570bdc5f0bcbce54b0719ce2e85d2a559e9bfac7
+Merge: 1681ef4 61e4b8a
+Author: ***
+Date:   Sat Feb 10 19:45:27 2024 +0100
+
+    statuMerge branch 'main' of https://github.com/***/mi-primer-repositorio
+
+commit 1681ef4efed85a8d534c6e78c50b0d67353adf75
+
+* Crear commit con el editor de texto vs code
+    *En el editor de vs code vemos que no tenemos ninguna letra  a la izauierda si no hay nada que hacer
+    *Cuando guardo los cambios aparece la letra M a la izquierda en vs code
+    
