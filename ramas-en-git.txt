@@ -1,0 +1,95 @@
+https://youtu.be/mBYSUUnMt9M?t=6343
+Una rama en Git es una linea independiente de desarrolo en el repositorio 
+Se crea a partir de un punto de la rama main y sigue otro camino a partir de alli
+1 Comando git branch <nombre de la nueva rama>
+
+    *** (main)
+$ git branch version-java
+
+*Con git branch vemos las ramas creadas 
+***(main)
+$ git branch
+* main
+  version-java
+* Vemos que esta main y la rama version-java
+
+*Cambiar a una rama comando (main)
+$ git checkout <version-java>
+
+***(main)
+$ git checkout verrsion-java
+Switched to branch 'version-java'
+
+*Hemos cambiado de la rama main a version-java
+    podemos verlo leyendo al final  (version-java)
+    Se puede ver con git branch version-java esta en verde
+
+* Si queremos crear una nueva rama e ir a esa rama usamos el comando
+git checkout -b <nombre de la rama nueva>
+
+* 
+* Cambiar nombre rama repositorio local git branch -m version-js
+    lo podemos hacer estando en la rama version-java y cambiamos al nuevo nombre
+    *** (version-java)
+    $ git branch -m version-js
+
+    Aparece el nuevo nombre de la rama
+    ***(version-js)
+* Cambiar nombre de la rama sin estar en la carpeta
+    git branch -m version-js version-javascript
+
+* * Eliminar rama git branch -d version-javascript
+    Cambiamos a rama principal
+     *** (main)
+        $ git branch -d version-javascript
+        Deleted branch version-javascript (was 377aadd).
+    De esta manera hemos eliminado esa rama
+
+* CREAR COMMIT EN UNA RAMA
+
+1 Creamos rama y vamos a ella
+   *** (main)
+    $ git checkout -b version-javascript
+    Switched to a new branch 'version-javascript'
+
+    *** (version-javascript)
+
+    Estamos en la nueva rama version-javascript
+
+* Compro (version-javascript)
+    *** (version-javascript) $ git status
+    On branch version-javascript
+    Untracked files:
+    (use "git add <file>..." to include in what will be committed)
+            comandos-gitbash.txt
+            ramas-en-git.txt
+
+    nothing added to commit but untracked files present (use "git add" to track)
+    bamos con git status
+
+    tenemos dos archivos para añadir estado stage
+
+    git add comandos-gitbash.txt
+
+    *** (version-javascript)
+    $ git status
+    On branch version-javascript
+    Changes to be committed:
+    (use "git restore --staged <file>..." to unstage)
+            new file:   comandos-gitbash.txt
+
+    Untracked files:
+    (use "git add <file>..." to include in what will be committed)
+            ramas-en-git.txt
+
+    Tenemos un archivo para añadir a commit comandos-gitbash.txt
+     (version-javascript)
+    $ git commit
+    [version-javascript 0bde00f] commit en rama version-javascript
+    1 file changed, 105 insertions(+)
+    create mode 100644 comandos-gitbash.txt
+    
+    SE HA CREADO UN COMMIT EN LA RAMA VERSION-javascript
+
+
+
