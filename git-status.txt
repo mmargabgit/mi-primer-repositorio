@@ -1,4 +1,4 @@
-comando status
+comando status https://youtu.be/mBYSUUnMt9M?t=4064
 1 estando en repositorio local
 2 git status
 On branch main
