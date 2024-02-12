@@ -33,7 +33,40 @@ https://youtu.be/mBYSUUnMt9M?t=12932
  
     * Tenemos en este momnento 14 coomits para actualizar en el repsoirtorio remoto
 
-4 Creamos commit de este archivo
+4 Quitamos del estado stage este archivo
+    ***(main)
+    $ git restore --staged gh03-crear-commit-reposit-conado.txt
+5 Hemos quitado de estago stage este archivo . Lo volvemos a poner estado stage y commit
+    ***  (main)
+    $ git commit
+    hint: Waiting for your editor to close the file...
 
+    * Vamos a editor vs code y escribimos el commit. Guardamos y cerramos
+    * Al cerrar no viene lo siguiente
+        [main d8c24c5] gh03-crear-commit-reposit-conado.txt 01
+        1 file changed, 39 insertions(+)
+        create mode 100644 gh03-crear-commit-reposit-conado.txt
+6 Vemos los commits creados con git log
+        commit d8c24c52d3a272148e2cd34720d35e449153ffc3 (HEAD -> main)
+    Author: Manuel Marquez Gabardino <159382715+email@users.noreply.github.com>
+    Date:   Mon Feb 12 22:57:29 2024 +0100
 
+        gh03-crear-commit-reposit-conado.txt 01
+            *Tenemos un origin con fetch y otro con push
+7 Vemos el nombre que se le dio al repositorio remoto con git remote
+    ***(main)
+    $ git remote
+    origin
 
+    *vemos que al repositorio tiene el nombre de origin
+8 Ver de forma mas especfica el repositorio remoto con git remote -vemos
+    ***(main)
+    $ git remote -v
+    origin  https://github.com/email/mi-primer-repositorio.git (fetch)
+    origin  https://github.com/email/mi-primer-repositorio.git (push)
+ 
+    *Tenemos un origin con fetch y otro con push
+    * Con fetch traemos todos los cambios del repositorio del remoto al local y push al reves
+    * El email https://github.com/email/mi-primer-repositorio.git lo cogimos del repositorio remoto
+
+9 Enviamos los cambios a github con push . Tendremos en el local y remoto la misma informacion
