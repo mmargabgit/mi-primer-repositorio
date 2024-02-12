@@ -1,0 +1,16 @@
+Servicio de hosting que nos permite almacenar proyectos de desarrollo de software y control de versiones usando Git
+Se trabajar en un entorno publico para que otros puedan aportar cambios
+Trabajamos en git local ( en tu PC) y lo compartimos en GitHub remmoto
+
+1 Creamos cuenta en GitHub
+    a Pagina web github.compartimos
+    b Click sign up
+    c Entra tu correo y password
+    d Se envia un codigo de verificacion a tu correo. 
+    E Rellenas si eres profesor, estudiante  diversas opciones
+    F Click continuar for free
+    E Se inicializa el dashboard. Pagina principal
+    F Click logo principal de github . Barra busqueda para buscar otros repositorios.
+2 Ver tranquilamente todas las opciones del dashboard
+
+
