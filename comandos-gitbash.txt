@@ -111,3 +111,7 @@ git checkout -b <nombre de la rama nueva>
     Se fusionan las ramas en main si na hay conflictos.
 
 *Fusionar ramas habiendo conflictos
+    git merge js
+* Arreglamos los conflictos y acabamos con 
+     git merge --continue
+
