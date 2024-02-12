@@ -1,9 +1,29 @@
-https://youtu.be/mBYSUUnMt9M?t=7958
+https://youtu.be/mBYSUUnMt9M?t=7958  test
 Se puede fusionar una rama con otra para incluir los datos de una en otra
 Combinar diferentes lineas de programacon
 Para fusionar ramas se debe estar en la rama que recibira la fusionar
 ## Fusionar ramas
     estando en main en repositorio local
-     git merge version-javascript
-     
-## Conflictos al fusionar ramas 
+
+    1 Creamos una rama llamada js
+
+        
+        ***(main)
+        $ git branch js
+    2 Cambiamos a la rama creada
+
+        *** (main)
+        $ git checkout js
+        Switched to branch 'js'
+    3 Comprobamos que se ha copiado de la rama principal todos los archivos
+    ***(js)
+      $ ls
+        README.md                              estado-stage.txt
+        agregar-archivo-repositorio.txt        fusionar-ramas-git.txt
+        clonar-repos-remoto.txt                git-status.txt
+        comandos-gitbash.txt                   modificar-commit.txt
+        crear-un-commit.txt                    ocultar-correo-en-github.txt
+        crear-un-repositorio.txt               ramas-en-git.txt
+        enviar-cambios-a-github-push.txt       traer-cambios-con-pull-desde-remoto.txt
+        enviar-repositorio-local-a-github.txt  tres-areas-de-git.txtnflictos al fusionar ramas 
+    4 Guardamos este archivo  en js . Lo añadimos al estado stage y estado commit y cerramos
