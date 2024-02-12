@@ -1,4 +1,4 @@
-https://youtu.be/mBYSUUnMt9M?t=7958  test
+https://youtu.be/mBYSUUnMt9M?t=7958  test 1 Conflicto
 Se puede fusionar una rama con otra para incluir los datos de una en otra
 Combinar diferentes lineas de programacon
 Para fusionar ramas se debe estar en la rama que recibira la fusionar
@@ -27,3 +27,44 @@ Para fusionar ramas se debe estar en la rama que recibira la fusionar
         enviar-cambios-a-github-push.txt       traer-cambios-con-pull-desde-remoto.txt
         enviar-repositorio-local-a-github.txt  tres-areas-de-git.txtnflictos al fusionar ramas 
     4 Guardamos este archivo  en js . Lo añadimos al estado stage y estado commit y cerramos
+    5 Hacemos cambios en el archivo fusionar-ramas.git.txt en rama js Añadimos en primera linea test y otros cambios .Guardamos y cerramos   
+    6 Añadimos estado stage
+        ***mi-primer-repositorio (js)
+            $ git add fusionar-ramas-git.txt
+
+            ***primer-repositorio (js)
+    7 Vemos el estado del repositorio 
+            $ git status
+            On branch js
+            Changes to be committed:
+            (use "git restore --staged <file>..." to unstage)
+                    modified:   fusionar-ramas-git.txt
+    8 Añadimos estado commit en el repositorio
+
+            ***-repositorio (js)
+            $ git commit
+            [js aa50187] test en 1 linea
+            1 file changed, 24 insertions(+), 4 deletions(-)
+    9 Cambiamos a rama main del repositorio
+            ***-primer-repositorio (js)
+            $ git checkout main
+            Switched to branch 'main'
+            Your branch is ahead of 'origin/main' by 5 commits.
+            (use "git push" to publish your local commits)
+    10 Fusionamos las ramas main y js . Estamos en main del repositoro mi-primer-repositorio
+            ***/mi-primer-repositorio (main)
+            $ git merge js
+            Updating 3953343..aa50187
+            Fast-forward
+            fusionar-ramas-git.txt | 28 ++++++++++++++++++++++++----
+            1 file changed, 24 insertions(+), 4 deletions(-)
+    11   Comprobamos los commits
+            **/mi-primer-repositorio (main)
+        $ git log
+        commit aa501875a8cb26c43f6da1a11fc414a2223db93f (HEAD -> main, js)
+        Author: Manuel Marquez Gabardino <159382715+mmargabgit@users.noreply.github.com>
+        Date:   Mon Feb 12 18:55:34 2024 +0100
+
+            test en 1 linea
+
+
