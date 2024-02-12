@@ -1,0 +1,39 @@
+https://youtu.be/mBYSUUnMt9M?t=12932 
+1 Guardamos este archivo .El punto del archivo se convierte en una x.
+2 Comprobamos estado
+   ***(main)
+    $ git status
+    On branch main
+    Your branch is ahead of 'origin/main' by 14 commits.
+    (use "git push" to publish your local commits)
+
+    Untracked files:
+    (use "git add <file>..." to include in what will be committed)
+            gh03-crear-commit-reposit-conado.txt
+
+    nothing added to commit but untracked files present (use "git add" to track)
+3 Cambiamos estado a stage 
+    ***(main)
+    $ git add gh03-crear-commit-reposit-conado.txt
+3 Vemos el estado del repositorio
+    ***(main)
+    $ git status
+    On branch main
+    Your branch is ahead of 'origin/main' by 14 commits.
+    (use "git push" to publish your local commits)
+
+    Changes to be committed:
+    (use "git restore --staged <file>..." to unstage)
+            new file:   gh03-crear-commit-reposit-conado.txt
+
+    Changes not staged for commit:
+    (use "git add <file>..." to update what will be committed)
+    (use "git restore <file>..." to discard changes in working directory)
+            modified:   gh03-crear-commit-reposit-conado.txt
+ 
+    * Tenemos en este momnento 14 coomits para actualizar en el repsoirtorio remoto
+
+4 Creamos commit de este archivo
+
+
+
