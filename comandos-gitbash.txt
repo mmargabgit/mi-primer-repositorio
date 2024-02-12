@@ -1,0 +1,113 @@
+1 En gistbash en la linea mmarg@MANUEL MINGW64 ~
+el signo ~ indica en que carpeta o donde nos encontramos
+Es el directorio principal
+
+2 Cambiar de directorio : cd change directory
+mmarg@MANUEL MINGW64 ~
+$ cd Desktop
+* Hemos cambiado a la sigiente carpeta. Es a partir de Users.
+* Si tenemos carpetas con espacios la marcamos con comillas.
+* si queremos desplazarnos a la ultima carpeta .
+   mmarg@MANUEL MINGW64 ~/Desktop
+$ cd ***Github/curso-github. Los tres asteriscos indican carpetas anteriores que no he escrito.
+
+* Si tecleamos cd.. subimos un nivel 
+
+~***/Github/curso-github
+$ cd ..
+
+* obtenemos ***/Github
+
+3 Hacer un directorio mkdir  = Make Directory
+     ~***/Github/curso-github
+    $ mkdir test   creamos una carpeta en gurso-github
+* Para ver la carpeta creada vamos al explorador de windows para ver la carpeta test
+
+3.1 Eliminar directorio rmdir = remove directory
+    *Estamos en la carpeta  *** curso-github y queremos quitar carpeta /test
+    * con el comando ls con+mprobamos que e+hemos eliminado la carpeta test
+    ~***/Github/curso-github
+    $ ls
+    mi-primer-repositorio/  proyecto-github/
+
+
+
+4 Comprobamos con el comando ls que existe la carpeta
+
+  ~***curso-github
+$ ls
+mi-primer-repositorio/  proyecto-github/  test/
+
+* Vemos las carpeta test/ creada en curso-github. Es carpeta porque termina en /
+* Si tuvieramos archivos en la carpeta no apareceria la barra /
+
+5 comando clear para limpiar pantalla de gistbash
+
+6 Comando git confin --global user.name "" . Configura user.m+name
+    
+    *global los cambios seran de forma global a todos los repositorios
+
+7 Para ver el user.name de los repositorios git config user.name
+
+8 Configurar el user.email, comando git config --global user.email "pepe@gmail" 
+
+    *No usar tu correo personal. Mejor usar el que utiliza github
+    * En github voy a la parte 
+    derecha superior. Click en perfil
+    *Vamos abajo en la ventana desplegable, Click en settings
+    * Vamos parte izquierda click en emails
+    * Copiamos el que empieza con varios digitos
+        **********+mmargabgit@users.noreply.github.com
+
+9 Comprobar el user.email . Comando git config user.email
+
+10 Cambiar de (master) del repositorio a (main)
+     git config --global init.defaultBranch main 
+
+11 Pasar a estado stage git add <file>
+    * Se puede hacer con git add.
+
+12 Revertir estado stage a unstage
+
+    git rm --cache <file>
+
+13 Comando git commit -m "Esto es mi primer commit"
+    * Se puede hacer commit en el editor de vs code
+    con el comando git commit click Enter y vamos al editor vs code y escribimos el mensaje
+
+* enmendar el ultimo commit git commit --amend
+* Revertir el ultimo commit git reset --soft HEAD~1
+
+13 Comando ver listado de commits git log
+    
+    * Para salir del listado , scroll hasta abajo del todo aparecera END . cLICK TECLA Q y se cierra
+    * Para ver los cambios en los commits git log -p
+14 Configurar el editor vs code git config --global core.editor "code --wait"
+    * Se pueden asociar otros tipos de editores.
+    Ve a github documentacion y en asociar editores de texto con Git . puedes cambiar a otro.
+
+15  Crear rama en repositorio local comando : git branch version-java
+
+    * Para ver las ramas comando git branch
+    * Para cambiar de rama comando git checkout <rama>
+     Ejemplo(main)
+$ git checkout version-java
+Switched to branch 'version-java'
+
+* Si queremos crear una nueva rama e ir a esa rama usamos el comando
+git checkout -b <nombre de la rama nueva>
+
+* Cambiar nombre rama repositorio local git branch -m version-js
+    lo podemos hacer estando en la rama version-java y cambiamos al nuevo nombre
+
+* Cambiar nombre de la rama sin estar en la carpeta
+    git branch -m version-js version-javascript
+
+* Eliminar rama git branch -d version-javascript
+
+* Fusionar ramas Se debe estar en la rama que recibe la informacion
+    git merge version-javascript
+
+    Se fusionan las ramas en main si na hay conflictos.
+
+*Fusionar ramas habiendo conflictos

@@ -1,0 +1,9 @@
+https://youtu.be/mBYSUUnMt9M?t=7958
+Se puede fusionar una rama con otra para incluir los datos de una en otra
+Combinar diferentes lineas de programacon
+Para fusionar ramas se debe estar en la rama que recibira la fusionar
+## Fusionar ramas
+    estando en main en repositorio local
+     git merge version-javascript
+     
+## Conflictos al fusionar ramas 
