@@ -62,9 +62,72 @@ Para fusionar ramas se debe estar en la rama que recibira la fusionar
             **/mi-primer-repositorio (main)
         $ git log
         commit aa501875a8cb26c43f6da1a11fc414a2223db93f (HEAD -> main, js)
-        Author: Manuel Marquez Gabardino <159382715+mmargabgit@users.noreply.github.com>
+        Author: Manue <***.noreply.github.com>
         Date:   Mon Feb 12 18:55:34 2024 +0100
 
             test en 1 linea
+12 Añadimos a la etapa stage el cambio del archivo
+    ***rimer-repositorio (main)
+    $ git add fusionar-ramas-git.txt
+13 Pasamos estado commit del repositorio
+    ***mi-primer-repositorio (main)
+    $ git commit
+    [main a93d7b8] test 1 Conflicto
+    1 file changed, 42 insertions(+), 1 deletion(-)
+14 Fusionamos las ramas
+    ***(main)
+    $ git merge js
+    Already up to date.
+15 Cambiamos al repositorio js
+    ***mi-primer-repositorio (main)
+    $ git checkout js
+    Switched to branch 'js'
+16 Comprobamos el listado del repositorio
+    ***mi-primer-repositorio (js)
+    $ ls
+    README.md                              estado-stage.txt
+    agregar-archivo-repositorio.txt        fusionar-ramas-git.txt
+    clonar-repos-remoto.txt                git-status.txt
+    comandos-gitbash.txt                   modificar-commit.txt
+    crear-un-commit.txt                    ocultar-correo-en-github.txt
+    crear-un-repositorio.txt               ramas-en-git.txt
+    enviar-cambios-a-github-push.txt       traer-cambios-con-pull-desde-remoto.txt
+    enviar-repositorio-local-a-github.txt  tres-areas-de-git.txt
+17 Pasamos al estado stage
+    ***/mi-primer-repositorio (js)
+    $ git add fusionar-ramas-git.txt
+18 Comentamos el repositorio
+    ***mi-primer-repositorio (js)
+    $ git commit
+    [js 97d4c4d] 9  prueba
+    1 file changed, 1 insertion(+), 1 deletion(-)
+19 Cambiamos al repositorio main
+     ***-primer-repositorio (js)
+    $ git checkout main
+    Switched to branch 'main'
+    Your branch is ahead of 'origin/main' by 7 commits.
+    (use "git push" to publish your local commits)
+20 Vemos que aparece conflicto en la fusion
+     ***repositorio (main)
+    $ git merge js
+    Auto-merging fusionar-ramas-git.txt
+    CONFLICT (content): Merge conflict in fusionar-ramas-git.txt
+    Automatic merge failed; fix conflicts and then commit the result.
 
+21   Tenemos que arreglar el conflicto
+    1 Vamos a vs code editor y vemos en el botón de abajo a la derecha resolver merge.
+    2 Tenemos varias opciones para arreglar el conflicto Incoming, Current Result.
+        A EN Incoming tenemos Accept Incoming,Accept combination
+        B En Current tenemos las mismas opciones 
+        C En result tenemos el resultado 
+    D Cuando tengamos los cambios deseados nos mostrara 0 conflictos si no los 
+    hay.
+    E click en complete Merge abajo a la derecha.
+    3 En gitbash podemos ver ***-repositorio (main|MERGING)
+    Escribimos :   $ git merge --continue
+    hint: Waiting for your editor to close the file...  
+
+    4 Abrimos el editor y en COMMIT_EDITMSG APARECE Merge Branch ‘js’. Guardamos y cerramos. Aparece MERGING)
+    $ git merge --continue
+22  Acabado la fusion con conflicto.
 
