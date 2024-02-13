@@ -1,0 +1,172 @@
+
+https://youtu.be/mBYSUUnMt9M?t=15575
+# Creando el repositorio
+
+1 Cambiamos a la carpeta donde queremos crear el nuevo repositorio
+
+  curso-github/mi-primer-repositorio (main)
+  $ cd ..
+
+2 Creamos la carpeta para el repositorio en la carpeta curso-github
+
+  ...curso-github
+  $ mkdir proyecto-github2
+
+3 Comprobamos las carpeta creada
+
+    ***curso-github
+    $ ls
+    mi-primer-repositorio/                            'mi-primer-repositorio - Acceso directo.lnk'*
+    'mi-primer-repositorio - Acceso directo (2).lnk'*   proyecto-github/
+    'mi-primer-repositorio - Acceso directo (3).lnk'*   proyecto-github2/
+
+ *Capeta creada proyecto-github2
+
+
+4 Creamos el repositorio
+
+  ***proyecto-github2
+  $ git init
+  Initialized empty Git repository in C:/Users/mmarg/Desktop/MANUEL_MARQUEZ_GABARDINO/Programacion/Github/curso-github/proyecto-github2/.git/
+
+
+5 comprobamos que es un repositorio con ls 
+
+  /proyecto-github (master)
+  $ ls
+  enviar-repositorio-local-a-github.txt
+
+  #vemos (master al final) y que ademas al final pone .git
+
+6 Vemos en que estado esta el archivo
+
+    ...proyecto-github2
+    $ git status
+    On branch master
+
+    No commits yet
+
+    Untracked files:
+      (use "git add <file>..." to include in what will be committed)
+            enviar-repositorio-local-a-github.txt
+
+    nothing to commit (create/copy files and use "git add" to track)
+
+7 Una vez creado el repositorio creamos un archivo llamado programa.js
+
+    En el editor de vs code creamos el archivo y en primera linea: console.log("Hola, Mundo");
+    Guardamos el archivo control + s y cerramos.
+  Vamos a vs code y vemos a la izquierda una U de untracked
+7 lo añadimos al estado de stage
+
+    Previamente guardamos el archivo en vs code y vemos m a la izquierda de modificado
+        ***b2 (master)
+    $ git add programa.js
+
+
+8   Comprobamos el estado
+
+        ***b2 (master)
+    $ git status
+    On branch master
+
+    No commits yet
+
+    Changes to be committed:
+    (use "git rm --cached <file>..." to unstage)
+            new file:   programa.js
+
+
+
+9 Añadimos git commit pero solo aparece en el local
+    * Generamos el commit y en el commit escribimos crear programa.js
+        b2 (master)
+        $ git commit
+        hint: Waiting for your editor to close the file...
+    
+    **vamos a vs code editor y escribimos en COMMIT_EDITMSG en la primera linea "crear programa.js"
+    **Guardamos el archivo COMMIT_EDITMSG y cerramos
+    
+    **Al cerrar se abre lo siguiente:
+                $ git commit
+        hint: Waiting for your editor to close the file...
+        [master (root-commit) 20aa86f] crear programa.js
+        1 file changed, 1 insertion(+)
+        create mode 100644 programa.js
+
+        **Se ha creado el commit crear.programa.js
+
+10 Con git log vemos el commit creado
+    ***b2 (master)
+    $ git log
+    commit 20aa86f255ab69dba0bf0d47158e43e8deb5fc8a (HEAD -> master)
+    Author: Manuel Marquez Gabardino <***+mmargabgit@users.noreply.github.com>
+    Date:   Tue Feb 13 19:05:29 2024 +0100
+
+        crear programa.js
+
+    ## Se ha creado correctamente el commit crear programa.js
+        Este commit no forma parte del remoto
+
+
+10 En github creamos el repositorio remoto. No tiene que tener el mismo nombre
+  
+        Click derecha superior en boton + 
+        Click en el desplegable New repository
+        Repository name proyecto-github
+        Click Create repository
+
+9 Vemos los repositorios remotos
+
+    proyecto-github (master)
+    $ git remote -v
+
+  **No vemos ningun repositorio no tenemos respuesta
+
+10 añadimos un origin al remoto con git remote add origin
+    Utilizamos git remote add origin " email donde esta ubicado el repositorio"
+  Vamos a github y copiamos la url del repositorio creado en Github proyecto-github
+  en github la direccion url del repositorio. Copiamos : https://github.com/mmargabgit/proyecto-javascript.git
+
+    ***proyecto-github2 (master)
+    $ git remote add origin https://github.com/mmargabgit/proyecto-javascript.git
+
+12 Comprobamos nuestros repositorios remotos
+
+        ***b2 (master)
+        $ git remote -v
+        origin  https://github.com/mmargabgit/proyecto-javascript.git (fetch)
+        origin  https://github.com/mmargabgit/proyecto-javascript.git (push)
+
+13 Ahora podemos enviar nuestros cambios del local al remoto
+    a comprobamos los commit que tenemos con log
+            ***b2 (master)
+        $ git log
+        commit 20aa86f255ab69dba0bf0d47158e43e8deb5fc8a (HEAD -> master)
+        Author: Manuel Marquez Gabardino <***+mmargabgit@users.noreply.github.com>
+        Date:   Tue Feb 13 19:05:29 2024 +0100
+            crear programa.js
+
+14 Con git fetch vemos si tenemos algo en el repositorio remoto
+        ***  b2 (master)
+        $ git fetch
+
+** No hay ninguna respuesta por lo que no tenemos nada en el remoto para actualizar
+
+15 Enviamos nuestros cambios de local a remoto  origin
+   *** b2 (master)
+    $ git push origin master
+    Enumerating objects: 3, done.
+    Counting objects: 100% (3/3), done.
+    Writing objects: 100% (3/3), 276 bytes | 276.00 KiB/s, done.
+    Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+    To https://github.com/mmargabgit/proyecto-javascript.git
+    * [new branch]      master -> master
+
+
+
+
+
+
+
+
