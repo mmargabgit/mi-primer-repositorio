@@ -114,3 +114,27 @@ podemos borrar  Escritorio
 $ git push origin main
 Everything up-to-date
 
+23 Si pasamos este archivo a estado stage y despues commit y despues
+    actualizamos la informacion del remoto con el local 
+   *** (main)
+    $ git push origin main
+    Enumerating objects: 5, done.
+    Counting objects: 100% (5/5), done.
+    Delta compression using up to 12 threads
+    Compressing objects: 100% (3/3), done.
+    Writing objects: 100% (3/3), 1.04 KiB | 1.04 MiB/s, done.
+    Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+    remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+    To https://github.com/mmargabgit/mi-primer-repositorio.git
+    2da32cb..84ed5a5  main -> main
+24 Comprobamos con git log el commit enviado
+    ***(main)
+    $ git log
+
+        commit 84ed5a5321fd9dd15ec9cab43f45d1a9a77ccccb (HEAD -> main, origin/main, origin/HEAD)
+    Author: Manuel Marquez Gabardino <***+mmargabgit@users.noreply.github.com>
+    Date:   Tue Feb 13 14:07:21 2024 +0100
+
+        gh03 commit 130224 1408
+
+
