@@ -1,2 +1,2 @@
-repositorio para practicar en git pull
+repositorio para practicar en git pull (freeCodeCamp)
 aprendiendo-github-en-freecodecamp
