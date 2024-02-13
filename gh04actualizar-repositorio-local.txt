@@ -1,0 +1,161 @@
+https://youtu.be/mBYSUUnMt9M?t=14662
+
+### GIT PULL  ###
+
+Con git pull traemos la informacion cambiada del repositorio remoto al local 
+para que ambos tengan la misma informacion
+
+1 En github abrimos nuestro repositorio mi-primer-repositorio
+2 Abrimos el archivo Readme.md 
+3 Click en edit this file .Pasa el cursor por el simbolo del lapiz .Parte derecha superior junto simbolo descarga
+4 Cambio # mi-primer-repositorio actualizar "repositorio para practicar en git pull"
+5 En coomit changes Creamos un commit "Actualizar Readme"
+6 Tenemos un nuevo commit en el remoto que no tenemos en el local
+7 En nuestro repositorio local vemos que nuestro archivo Readme no ha cambiado
+8 Vamos a gitbash y vamos a nuestro repositorio
+9 Comprobamos el estado del repositorio
+    (main)
+    $ git status
+    On branch main
+    Your branch is up to date with 'origin/main'.
+## Nos dice que nuestro repositorio local esta actualizado
+
+10 Actualizamos la informacion del repositorio local con git pull
+    (main)
+    $ git pull origin main
+    remote: Enumerating objects: 5, done.
+    remote: Counting objects: 100% (5/5), done.
+    remote: Compressing objects: 100% (3/3), done.
+    remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+    Unpacking objects: 100% (3/3), 984 bytes | 98.00 KiB/s, done.
+    From https://github.com/mmargabgit/mi-primer-repositorio
+    * branch            main       -> FETCH_HEAD
+    671c42d..b9cf663  main       -> origin/main
+    Updating 671c42d..b9cf663
+    Fast-forward
+    README.md | 2 +-
+    1 file changed, 1 insertion(+), 1 deletion(-)
+
+## Nos dice se cambio un archivo README.MD con una entrada y un borrado
+11 En vs code podemos ver el cambio del archivo Readme.md . en la primera linea
+12 Podemos verificarlo con git log
+    ***(main)
+    $ git pull origin main
+
+        
+        commit b9cf6634e3533e873cc9a9866e053badde157cfb (HEAD -> main, origin/main, origin/HEAD)
+    Author: mmargabgit <*****+mmargabgit@users.noreply.github.com>
+    Date:   Tue Feb 13 14:47:20 2024 +0100
+
+        Actualizar Readme
+
+### GIT PULL VS GIT FETCH ###  https://youtu.be/mBYSUUnMt9M?t=15069
+
+Git pull comando usado para descargar el contenido de un repositorio e inmediatamente actualizar 
+un repositorio local para que ambos tengan la misma informacion
+
+Git fetch comando usado para verificar los cambios realizados en el repositorio remoto sin combinar esos cambios con el repositorio local.
+Git fetch permite saber si se han realziado cambios en el repositorio remoto desde la ultima vez que se actualizo el repositorio local con git pull
+
+1 Vamos a github,  repositorio "mi-primer-repositorio" archivo Readme.md
+2 Edit y añadimos en la primera linea (freeCodeCamp)
+3 En boton Commit changes escribimos " Agregar (freeCodeCamp)"
+4 Verificamos con git log
+
+    ***(main)
+    $ git log
+
+    commit b9cf6634e3533e873cc9a9866e053badde157cfb (HEAD -> main, origin/main, origin/HEAD)
+    Author: mmargabgit <159382715+mmargabgit@users.noreply.github.com>
+    Date:   Tue Feb 13 14:47:20 2024 +0100
+
+        Actualizar Readme
+
+# Este es el ultimo commit que tenemos
+
+5 con git fetch origin queremos obtener la informacion de remoto para decidir si queremos incorporar la informacion
+       *** (main)
+    $ git fetch origin
+    remote: Enumerating objects: 5, done.
+    remote: Counting objects: 100% (5/5), done.
+    remote: Compressing objects: 100% (3/3), done.
+    remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+    Unpacking objects: 100% (3/3), 1003 bytes | 100.00 KiB/s, done.
+    From https://github.com/mmargabgit/mi-primer-repositorio
+    b9cf663..7300f5b  main       -> origin/main
+
+    #Me dice que los cambios se obtuvieron
+6 Con git log verificamos si lo hemos obtenido
+    commit b9cf6634e3533e873cc9a9866e053badde157cfb (HEAD -> main)
+    Author: mmargabgit <159382715+mmargabgit@users.noreply.github.com>
+    Date:   Tue Feb 13 14:47:20 2024 +0100
+
+        Actualizar Readme
+    # No se ha incorporado el ultimo commit del remoto. Seguimos con el ultimo que teniamos
+
+7 Podemos ver en sv code que no se ha cambiado el archivo
+8 Con git checkout origin/main ponemos en pausa la informacion obtenida
+
+    ***main)
+    $ git checkout origin/main
+    Note: switching to 'origin/main'.
+
+    You are in 'detached HEAD' state. You can look around, make experimental
+    changes and commit them, and you can discard any commits you make in this
+    state without impacting any branches by switching back to a branch.
+
+    If you want to create a new branch to retain commits you create, you may
+    do so (now or later) by using -c with the switch command. Example:
+
+    git switch -c <new-branch-name>
+
+    Or undo this operation with:
+
+    git switch -
+
+    Turn off this advice by setting config variable advice.detachedHead to false
+
+    HEAD is now at 7300f5b Agregar (freeCodeCamp)
+
+# Nos advierte que podemos hacer cambios sin que afecten los archivos 
+    nos dice ademas que tenemos un cambio en el archivo y el commit se llama Agregar freeCodeCamp
+
+
+9 volvemos a main 
+    ***((7300f5b...))
+    $ git checkout main
+    Previous HEAD position was 7300f5b Agregar (freeCodeCamp)
+    Switched to branch 'main'
+    Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+    (use "git pull" to update your local branch)
+  
+  #Nos dice que podemos hacer pull para hacer los cambios hechos en el remoto  en e local 
+    # que nuestra rama local esta un commit por detras de la remota
+
+10 Traemos los cambios con pull
+
+    ***(main)
+    $ git pull origin main
+    From https://github.com/mmargabgit/mi-primer-repositorio
+    * branch            main       -> FETCH_HEAD
+    Updating b9cf663..7300f5b
+    Fast-forward
+    README.md | 2 +-
+    1 file changed, 1 insertion(+), 1 deletion(-)
+
+    # Se ha cambiado el archivo Readme.md
+    # Si vam
+    os a vs code editor podemos ver el cambio incorporado (freeCodeCamp" al final de la primera linea
+    
+11 Con git log podemos que se ha incorporado el commit agregar (freeCodeCamp)
+    commit 7300f5b0eb395a52f75e4b169ab1099534d457a6 (HEAD -> main, origin/main, origin/HEAD)
+    Author: mmargabgit <159382715+mmargabgit@users.noreply.github.com>
+    Date:   Tue Feb 13 15:23:24 2024 +0100
+
+        Agregar (freeCodeCamp)
+
+
+
+
+
+
