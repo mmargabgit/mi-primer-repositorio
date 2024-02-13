@@ -36,25 +36,3 @@ $ git log --oneline
 $ git remote -v
 origin  https://github.com/emailgit/mi-primer-repositorio.git (fetch)
 origin  https://github.com/emailgit/mi-primer-repositorio.git (push)
-
-9 si trato de enviar a repositorio remoto con push me sale
-  mensaje advertencia de connect to Github solicitando sign in
-
-10 para entrar hay que generar token seguridad
-11 voy a github a mi cuenta
-12 click derecha superoior en mi cuenta emailgit voy abajao y click en settings
-13 parte dizquierda .Vamos abajo y click Developer settings
-14 Click Personal access tokens
-15 Click token classic
-16 Click Generate personal access token
-ponemos expiration 90 dias
-Select scopes :marcamos repositorio y gist
-Vamos abajo click generate token
-"Son muchos caracteres"
-17 volvemos a settings developer settings personal access token  tokens classic aparece el token con denominacion aprendiendo-github
-podemos borrar  Escritorio
-18 ingresamos el codigo del token copiado
-19 aparece 
-$ git push origin main
-Everything up-to-date
-=======
