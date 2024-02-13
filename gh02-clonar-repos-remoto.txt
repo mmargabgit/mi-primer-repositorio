@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 Pasos
 1 Ir a github
 2 Abrir repositorio que queremos clonar 
@@ -14,14 +14,18 @@ rels
 git mote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
 Receiving objects: 100% (3/3), done.
 
+Eestamos en la carpeta donde queremos clonar el repositorio remoto mi-primer-repositorio
+Comprobamos con ls que el repositorio esta en la carpeta mi-primer-repositorio.
+
 ***/Github/curso-github
 $ ls
 mi-primer-repositorio/
 
 6  $ cd mi-primer-repositorio
 
+Comprobamos con log -oneline los commit que hemos traido
+
 7 $ got log --oneline
-bash: got: command not found
 
 ***/Github/curso-github/mi-primer-repositorio (main)
 $ git log --oneline
@@ -46,7 +50,7 @@ origin  https://github.com/emailgit/mi-primer-repositorio.git (push)
 ponemos expiration 90 dias
 Select scopes :marcamos repositorio y gist
 Vamos abajo click generate token
-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
+"Son muchos caracteres"
 17 volvemos a settings developer settings personal access token  tokens classic aparece el token con denominacion aprendiendo-github
 podemos borrar  Escritorio
 18 ingresamos el codigo del token copiado
@@ -54,59 +58,3 @@ podemos borrar  Escritorio
 $ git push origin main
 Everything up-to-date
 =======
-Pasos
-1 Ir a github
-2 Abrir repositorio que queremos clonar 
-3 Click en Code "esta en verde"
-4 En https click en copiar 
-5 Ir a gitbash y escribir lo siguiente git clone y pegar lo copiado
-$ git clone https://github.com/emailgit/mi-primer-repositorio.git
-Cloning into 'mi-primer-repositorio'...
-remote: Enumerating objects: 3, done.
-remote: Counting objects: 100% (3/3), done.
-remote: Compressing objects: 100% (2/2), done.
-rels
-git mote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
-Receiving objects: 100% (3/3), done.
-
-***/Github/curso-github
-$ ls
-mi-primer-repositorio/
-
-6  $ cd mi-primer-repositorio
-
-7 $ got log --oneline
-bash: got: command not found
-
-***/Github/curso-github/mi-primer-repositorio (main)
-$ git log --oneline
-4540e58 (HEAD -> main, origin/main, origin/HEAD) Initial commit
-
-8 Vemos lo que tenemos en remoto
--primer-repositorio (main)
-$ git remote -v
-origin  https://github.com/emailgit/mi-primer-repositorio.git (fetch)
-origin  https://github.com/emailgit/mi-primer-repositorio.git (push)
-
-9 si trato de enviar a repositorio remoto con push me sale
-  mensaje advertencia de connect to Github solicitando sign in
-
-10 para entrar hay que generar token seguridad
-11 voy a github a mi cuenta
-12 click derecha superoior en mi cuenta emailgit voy abajao y click en settings
-13 parte dizquierda .Vamos abajo y click Developer settings
-14 Click Personal access tokens
-15 Click token classic
-16 Click Generate personal access token
-ponemos expiration 90 dias
-Select scopes :marcamos repositorio y gist
-Vamos abajo click generate token
-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
-17 volvemos a settings developer settings personal access token  tokens classic aparece el token con denominacion aprendiendo-github
-podemos borrar  Escritorio
-18 ingresamos el codigo del token copiado
-19 aparece 
-$ git push origin main
-Everything up-to-date
->>>>>>> 61e4b8a6f0275058c8f11bcce6877ba026fe8d87
-20 El remoto esta actualizado up-to-date
