@@ -48,7 +48,7 @@ https://youtu.be/mBYSUUnMt9M?t=12932
         create mode 100644 gh03-crear-commit-reposit-conado.txt
 6 Vemos los commits creados con git log
         commit d8c24c52d3a272148e2cd34720d35e449153ffc3 (HEAD -> main)
-    Author: Manuel Marquez Gabardino <159382715+email@users.noreply.github.com>
+    Author: Manuel Marquez Gabardino <*****+email@users.noreply.github.com>
     Date:   Mon Feb 12 22:57:29 2024 +0100
 
         gh03-crear-commit-reposit-conado.txt 01
@@ -70,3 +70,47 @@ https://youtu.be/mBYSUUnMt9M?t=12932
     * El email https://github.com/email/mi-primer-repositorio.git lo cogimos del repositorio remoto
 
 9 Enviamos los cambios a github con push . Tendremos en el local y remoto la misma informacion
+
+10 si trato de enviar a repositorio remoto con push me sale
+  mensaje advertencia de connect to Github solicitando sign in
+
+### OCULTAR TU CORREO EN GITHUB
+
+10 para entrar hay que generar token seguridad
+11 voy a github a mi cuenta
+12 click derecha superoior en mi cuenta email voy abajo y click en settings
+13 parte dizquierda .Vamos abajo y click Developer settings
+14 Click Personal access tokens
+15 Click token classic
+16 Click Generate personal access token
+ponemos expiration 90 dias
+Select scopes :marcamos repositorio y gist
+Vamos abajo click generate token
+"Son muchos caracteres" 
+Copiamos y guardamos en ligar seguro la clave
+17 volvemos a settings developer settings personal access token  tokens classic aparece el token con denominacion aprendiendo-github
+podemos borrar  Escritorio
+18 ingresamos el codigo del token copiado
+=======
+
+### INTENTAR ENVIAR CAMBIOS A GITHUB https://youtu.be/mBYSUUnMt9M?t=13644
+
+19 Queremos enviar a la rama origin del remoto nuestro repositorio local main
+
+20 Comprobamos si es origin el nombre de la rama remota con git remote 
+
+  ***(main)
+    $ git remote
+    origin
+
+21 Vemos como podemos transferir informacion entre local y remoto con git remote -vemos
+
+    ***(main)
+    $ git remote -v
+    origin  https://github.com/mmargabgit/mi-primer-repositorio.git (fetch)
+    origin  https://github.com/mmargabgit/mi-primer-repositorio.git (push)
+
+22 Intentamos enviar nuestro repositorio local al remoto con git push
+$ git push origin main
+Everything up-to-date
+
