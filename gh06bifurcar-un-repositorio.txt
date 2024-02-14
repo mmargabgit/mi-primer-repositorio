@@ -1,0 +1,223 @@
+https://youtu.be/mBYSUUnMt9M?t=16136 
+https://docs.github.com/es/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo
+#CREAR UNA COPIA DEL REPOSITORIO REMOTO DE UN REPOSITORIO QUE NO NOS PERTENCE EN TU CUENTA DE GITHUB
+
+Estas en tu cuenta github
+Para ir al perfil de otro usuario ve a la barra de busqueda , parte superior derecha junto al signo mas
+vamos a estefaniacn   https://github.com/estefaniacn/estefaniacn
+Click Repositories en su CUENTA
+Click proyecto-html
+Click boton fork Se despliega ventana "Create a new fork"
+Repository name : mismo nombre proyecto-html, Description : escribe lo que quieras
+Activa Copy the main branch only
+Click Create Fork
+Podras ver en tu cuenta proyecto-html al lado de tu logotipo y abajo forked from estefaniacn/proyecto-html
+cLICK en tu cuenta. Veras junto a tus repositorios la de proyecto-html en tus Popular repositories
+## ya tiene una rama bifurcada EN GITHUB
+
+### CLONAR UN REPOSITORIO BIFURCADO EN TU REPOSITORIO LOCAL EN GITHUB###
+https://youtu.be/mBYSUUnMt9M?t=16578
+
+
+1 Nos colocamos en proyecto-html de nuestra cuenta  github
+2 Click Code Copia la direccion en HTTPS
+3 En gitbash te situas en la carpeta donde lo quieres CLONAR
+3 Si estas en la carpeta puedes usar el comando code .
+4 En gitbash git "clone email carpeta clonada"
+
+5 ***sitorio (main)
+    $ git clone https://github.com/mmargabgit/proyecto-html.git
+    Cloning into 'proyecto-html'...
+    remote: Enumerating objects: 12, done.
+    remote: Total 12 (delta 0), reused 0 (delta 0), pack-reused 12
+    Receiving objects: 100% (12/12), done.
+    Resolving deltas: 100% (1/1), done.
+
+6 En vs code podemos ver en nuestro repositorio la carpeta proyecto-html
+
+7 Para visualizar la carpeta en vs code editor
+    ***sitorio (main)
+    $ cd proyecto-html
+
+    primer-repositorio/proyecto-html (main)
+    $ code .
+
+**FIN CLONACION***
+
+###PULL REQUESTS###
+https://youtu.be/mBYSUUnMt9M?t=16753
+https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests
+
+Las solicitudes de incorporación de cambios te permiten informar a otros sobre los cambios que has insertado
+ en una rama de un repositorio de GitHub. Una vez que se abre una solicitud de incorporación de cambios, puedes
+  discutir y revisar los posibles cambios con los colaboradores y agregar confirmaciones de seguimiento antes de 
+  que los cambios se fusionen en la rama base.
+
+Esta relacionado con el tema anterior de bifurcacion
+Trabajamos en la rama en nuestro Pc lo llevamos a nuestro github y solicitamos un pull request a la cuenta que clonamos esa rama
+
+1 En vs code abrimos el archivo y cambiamos una linea 11 escribo  "<>Estoy aprendiendo GtiHub2</p>"
+
+2 Guardamos el archivo index.html y vamos a gitbash
+
+    ***sitorio/proyecto-html (main)
+    $ git status
+    On branch main
+    Your branch is up to date with 'origin/main'.
+
+    Changes not staged for commit:
+    (use "git add <file>..." to update what will be committed)
+    (use "git restore <file>..." to discard changes in working directory)
+            modified:   index.html
+
+    no changes added to commit (use "git add" and/or "git commit -a")
+
+3 Añadimos y commit
+    ***sitorio/proyecto-html (main)
+    $ git add index.html
+
+    ***i-primer-repositorio/proyecto-html (main)
+    $ git commit
+    [main d0a9d10] gh06agregar texto 140224 1355
+    1 file changed, 1 insertion(+)
+
+* Agregamos el commit " gh06agregar texto "
+
+4 agregamos los cambios a github REMOTO
+   
+   *** itorio/proyecto-html (main)
+    $ git push origin main
+    Enumerating objects: 5, done.
+    Counting objects: 100% (5/5), done.
+    Delta compression using up to 12 threads
+    Compressing objects: 100% (3/3), done.
+    Writing objects: 100% (3/3), 383 bytes | 383.00 KiB/s, done.
+    Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+    remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+    To https://github.com/mmargabgit/proyecto-html.git
+    b00fdbc..d0a9d10  main -> main
+5 En github abro el archivo y veo que se ha incorporado el cambio al archivo index.html
+    Podemos ver en gthub junto a history " d0a9d19 7 minutes ago" 
+    Podemos ver en github " This branch is 1 commit ahead of estefaniacn/proyecto-html:main."
+6 Click en boton "Contribute" 
+    .Click en "Open pull request"
+
+7  Si salimos del aitio Click en prouecto html de nuestro githb y click 1 commit ahead of esteania***
+    Click en Se abre ventana "Comparing changes"
+    Se pueden hacer cambios y comparar los archivos de main y el tuyo
+    Click en boton "Create pull request" viendo arrinba Able to merge" These branches can be automatically merged
+    En la nueva ventana en el cuadro Add a title "Agregar un parrafo al archivo html"
+
+    Click en "Create pull request" boton
+
+
+### PULL REQUEST A PARTIR DE UNA RAMA#
+
+https://youtu.be/mBYSUUnMt9M?t=17644
+
+Borramos la copia bifurcada anterior
+En github , arcjvio rama bifurcada  7 proyecto-html
+Click Settings para borrar repositorio. 
+Ve abajao en Danger Zone y click boton Delete this Repository
+En la ventana abierta click en I have rear adn understand these effects
+Delete mmargabgit/proyecto-html  Escibe esto en To confirm type ... box yaClick Delete this Repository
+Te solicita la nueva ventana acceso a github con tu contraseña
+
+##Ya no esta la rama bifurcada
+
+Volvemos a crear rama bifurcada 
+
+Vamos a repositorio de estefaniacn escribiendolo en el buscador
+Nos situamos en el repositorio proyecto-html de estefanica click en el proyecto
+
+cLICK EN Fork TODO IGUAL QUE ANTES Y CLICK Create fork
+Vamos a nuestra cuenta github y vemos el repositorio bifurcado .
+En el repositorio proyecto-html click en boton Code
+Copiamos direccion HTTPS
+En gitbash clonamos la rama bifurcada de github en git
+
+1 Clonamos en git el la rama bifurcada en proyecto-html
+
+    ***/proyecto-html (main)
+    $ git clone https://github.com/mmargabgit/proyecto-html.git
+    Cloning into 'proyecto-html'...
+    remote: Enumerating objects: 12, done.
+    remote: Total 12 (delta 0), reused 0 (delta 0), pack-reused 12
+    Receiving objects: 100% (12/12), done.
+    Resolving deltas: 100% (1/1), done.
+
+2 Abrimos el archivo en vs code con code .
+
+    ***/proyecto-html/proyecto-html (main)
+    $ code .
+3 creamos una rama 
+    ***proyecto-html/proyecto-html (main)
+    $ git checkout -b parrafo-nuevo
+    Switched to a new branch 'parrafo-nuevo'
+
+4 En vs code editor cambiamproyecto-html/proyecto-html (parrafo-nuevo)
+    $ git status
+    On branch parrafo-nuevo
+    Changes not staged for commit:
+    (use "git add <file>..." to update what will be committed)
+    (use "git restore <file>..." to discard changes in working directory)
+            modified:   index.html
+
+    no changes added to commit (use "git add" and/or "git commit -a")
+    os el parrafo 
+5 Cambiamos a estado stage y commit 
+        ***proyecto-html/proyecto-html (parrafo-nuevo)
+        $ git add .
+
+            ***/proyecto-html/proyecto-html (parrafo-nuevo)
+    $ git commit
+    hint: Waiting for your editor to close the file...
+
+
+    Vamos al editor de vs code y en la ventana abierta COMMIT_EDITMSG ESCRIBO " agregar parrafo 2" guardo y cierro
+
+        proyecto-html/proyecto-html (parrafo-nuevo)
+    $ git status
+    On branch parrafo-nuevo
+    nothing to commit, working tree clean
+
+    Vemos que no ha nada que commit para actualziar
+
+###ENVIAR A GITHUB RAMA DE GIT###
+
+1 En gitbash git push origin parrafo-nuevo
+
+   *** /proyecto-html/proyecto-html (parrafo-nuevo)
+    $ git push origin parrafo-nuevo
+    Enumerating objects: 5, done.
+    Counting objects: 100% (5/5), done.
+    Delta compression using up to 12 threads
+    Compressing objects: 100% (3/3), done.
+    Writing objects: 100% (3/3), 374 bytes | 374.00 KiB/s, done.
+    Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+    remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+    remote:
+    remote: Create a pull request for 'parrafo-nuevo' on GitHub by visiting:
+    remote:      https://github.com/mmargabgit/proyecto-html/pull/new/parrafo-nuevo
+    remote:
+    To https://github.com/mmargabgit/proyecto-html.git
+    * [new branch]      parrafo-nuevo -> parrafo-nuevo
+
+
+
+2 En github podemos ver en proyecto-html forked from estefaniacn/proyecto-html debajo "This branch is up to date with estefaniacn/proyecto-html:main."
+
+3 Vemos el estado de la rama Click boton main y se despliega ventana
+    En la pestaña Branches , podremos ver parrafo-nuevo
+    Click en rn la rama parrafo-nuevo
+    Se despliega la ventan parrafo-nuevo y podremos ver que abajo dice:
+    "This branch is 1 commit ahead of estefaniacn/proyecto-html:main."
+    
+
+
+
+
+
+
+
+
