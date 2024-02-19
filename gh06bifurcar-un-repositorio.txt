@@ -102,7 +102,7 @@ Trabajamos en la rama en nuestro Pc lo llevamos a nuestro github y solicitamos u
 6 Click en boton "Contribute" 
     .Click en "Open pull request"
 
-7  Si salimos del aitio Click en prouecto html de nuestro githb y click 1 commit ahead of esteania***
+7  Si salimos del aitio Click en proyecto html de nuestro githb y click 1 commit ahead of esteania***
     Click en Se abre ventana "Comparing changes"
     Se pueden hacer cambios y comparar los archivos de main y el tuyo
     Click en boton "Create pull request" viendo arrinba Able to merge" These branches can be automatically merged
@@ -183,7 +183,7 @@ En gitbash clonamos la rama bifurcada de github en git
 
     Vemos que no ha nada que commit para actualziar
 
-###ENVIAR A GITHUB RAMA DE GIT###
+###ENVIAR A GITHUB RAMA DE GIT a rama bifurcada###
 
 1 En gitbash git push origin parrafo-nuevo
 
@@ -214,6 +214,165 @@ En gitbash clonamos la rama bifurcada de github en git
     "This branch is 1 commit ahead of estefaniacn/proyecto-html:main."
     
 
+4 creamos rama en git cambiamos archivo en vs code agregamos a stage y commit
+    ***/proyecto-html (main)
+    $ git checkout parrafo nuevo
+    error: pathspec 'parrafo' did not match any file(s) known to git
+    error: pathspec 'nuevo' did not match any file(s) known to git
+
+   
+
+    ****/proyecto-html (main)
+    $ git checkout -b parrafo-nuevo
+    Switched to a new branch 'parrafo-nuevo'
+
+    ***/proyecto-html (parrafo-nuevo)
+    $ git add .
+
+      RAMA CREADA
+
+    ***/proyecto-html (parrafo-nuevo)
+    $ git commit
+    [parrafo-nuevo 9a823a8] agregar parrafo 2
+    1 file changed, 1 insertion(+)
+
+    COMPROBAMOS EL ESTADO DE LA RAMA
+
+       *** (parrafo-nuevo)
+    $ git status
+    On branch parrafo-nuevo
+    nothing to commit, working tree clean
+
+    ###ENVIO DE RAMA A GITBUSH###
+
+    Con git push origin "nombre de la rama" En este caso es parrafo-nuevo
+
+        ***(parrafo-nuevo)
+    $ git push origin parrafo-nuevo
+    Enumerating objects: 5, done.
+    Counting objects: 100% (5/5), done.
+    Delta compression using up to 12 threads
+    Compressing objects: 100% (3/3), done.
+    Writing objects: 100% (3/3), 390 bytes | 390.00 KiB/s, done.
+    Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+    remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+    remote:
+    remote: Create a pull request for 'parrafo-nuevo' on GitHub by visiting:
+    remote:      https://github.com/mmargabgit/proyecto-html/pull/new/parrafo-nuevo
+    remote:
+    To https://github.com/mmargabgit/proyecto-html.git
+    * [new branch]      parrafo-nuevo -> parrafo-nuevo
+
+5 En github vamos al repositorio proyecto-html que es una rama bifurcada
+    Podemos ver click main la rama parrafo-nuevo
+    Podemos ver en la rama el cambio del archivo
+    ***(parrafo-nuevo)
+    $ git push origin main
+    Everything up-to-date
+
+6 En github click proyecto-html click boton main Click boton en parrafo-nuevovemos lo siguiente "This branch is 1 commit ahead of estefaniacn/proyecto-html:main."
+    Click boton Contribute
+    Click Open pull request
+    Se abre Comparing changes
+    S e puede leer " Able to merge. These branches can be automatically merged."
+    Escribimos en titulo "Agregar un parrafo al archivo html"
+    Click boton "Create pull request"
+
+
+
+
+6 enviamos al repsoitorio el cambio de archivo
+
+###PULL REQUEST A PARTIR DE UNA RAMA  DE GIT###
+
+1 Cerramos el pull request anterior. En gitbush estefaniancn/proyecto-html
+en Agregar un parrafo al archivo html # 1418 vamos abajo y click close request
+Vamos otra vez abajo y en Closed with unmerged commits click enlace Settings
+Vamos abajo de la nueva ventana Danger zone Click boton "Deelete this repository"
+
+Seguir las instrucciones
+Si vamos a nuestros repositorios ya no lo vemos
+
+2 Volvemos a crear una rama bifurcada de estefanicacn
+
+Explorador en github "estefaniacn"
+En estefania https://github.com/estefaniacn/ Click Repositories
+Click repositorio proyecto-html
+Click Fork boton. En el desplegable click Create a new fork
+En la nueva venatan dejar en repository name box proyecto-html
+Escribir den Description box "Enviar pull request desde rama de git nuevo-parrafo2"
+Click boton Create fork
+
+3 Estamos en Github nuestro y vemos proyeto-html forked estefaniacn/proyecto-html
+4 en Gitbash creamos carpeta "proyecto-html2" y rama "nueva-rama2" del archivo clonado en proyecto-html2
+
+    /proyecto-html (main)
+    $ git checkout -b parrafo-nuevo2
+    Switched to a new branch 'parrafo-nuevo2'
+
+    ***/proyecto-html2/proyecto-html (parrafo-nuevo2)
+
+5 En vscode cambiamos el archivo index.html
+ ADD Y COMMIT archivo index.html cambio en linea 12
+
+    /proyecto-html (parrafo-nuevo2)
+    $ git add index.html
+
+    /proyecto-html2/proyecto-html (parrafo-nuevo2)
+    $ git status
+    On branch parrafo-nuevo2
+    Changes to be committed:
+    (use "git restore --staged <file>..." to unstage)
+            modified:   index.html
+
+en vscode esperamos a cerra COMMIT_EDITMSG
+    /proyecto-html (parrafo-nuevo2)
+    $ git commit
+    hint: Waiting for your editor to close the file...
+
+    Se añadio el commit
+
+    (parrafo-nuevo2)
+    $ git commit
+    [parrafo-nuevo2 096d3a9] Agregar parrafo
+    1 file changed, 1 insertion(+)
+
+Enviamos a github el commit de la rama
+
+proyecto-html (parrafo-nuevo2)
+$ git push origin parrafo-nuevo2
+    Enumerating objects: 5, done.
+    Counting objects: 100% (5/5), done.
+    Delta compression using up to 12 threads
+    Compressing objects: 100% (3/3), done.
+    Writing objects: 100% (3/3), 382 bytes | 382.00 KiB/s, done.
+    Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+    remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+    remote:
+    remote: Create a pull request for 'parrafo-nuevo2' on GitHub by visiting:
+    remote:      https://github.com/mmargabgit/proyecto-html/pull/new/parrafo-nuevo2
+    remote:
+    To https://github.com/mmargabgit/proyecto-html.git
+    * [new branch]      parrafo-nuevo2 -> parrafo-nuevo2
+
+SE CREO UNA RAMA EN EL REPOSITORIO REMOTO EN GITHUB
+
+En github podremos ver "parrafo-nuevo2 had recent pushes 3 seconds ago"
+
+En github click botn main y vemos todas las ramas
+
+Click view all branches
+Click en parrafo-nuevo2
+Click boton Compare& pull request
+En ventana Open a pull request vemos que compara nuestro archivo de rama parrafo-nuevo2 con estefanicacn/proyecto-html de pmain (head)
+En titulo "Agregar parrafo2"
+Click Create pull request boton verde
+En agregar parrafo2 #1419  This branch has no conflicts with the base baranch
+
+
+##ACTUALIZAR REPOSITORIO BIFURCADO###
+
+https://youtu.be/mBYSUUnMt9M?t=18171
 
 
 
